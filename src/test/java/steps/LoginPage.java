@@ -12,11 +12,12 @@ public class LoginPage {
     SelenideElement userPassword = $("#password");
     SelenideElement loginBtn = $("#login-button");
 
-    @When("I login to platform with name {string}")
-    public void iLoginToPlatform(String userName) {
+    @When("I login to platform with {string}")
+    public void LoginToPlatform(String arg0) {
         opensite.openUrl();
-        this.loginField.val(userName);
+        this.loginField.val(arg0);
         this.userPassword.val("secret_sauce");
         this.loginBtn.click();
     }
+
 }

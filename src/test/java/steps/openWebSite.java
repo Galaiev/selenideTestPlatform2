@@ -10,8 +10,7 @@ public class openWebSite {
 
     @Before
     public void openUrl() {
-//        Configuration.browser="firefox";
-        open("google.com");
+        open("https://www.saucedemo.com");
         $("#user-name").shouldBe(Condition.visible);
     }
 
